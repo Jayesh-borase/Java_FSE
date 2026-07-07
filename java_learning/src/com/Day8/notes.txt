@@ -1,0 +1,53 @@
+JDBC - Java Database Connection
+
+Drivers
+	Type I 	-  JDBC-ODBC Bridge Driver
+	Type II	-  Partly Java/Native Driver
+	Type III-  Pure Java Network Driver
+	Type IV	-  Pure Java JDBC Driver (Vendor Specific)
+	
+DriverManager - Responsible for making java app communicate with database through drivers 
+	-getConnection()
+		- Connection(I)
+			- getMetaData()
+				- DatabseMetaData(I)
+			- createStatement()
+				- Statement(I)
+					- executeQuery()
+						- ResultSet(I)
+							- getMetaData()
+								- ResultSetMetaData(I)
+			- PreparedStatement()
+				- preparedStatement()
+			-prepareCall
+				- CallableStatement(I)
+
+Statement - To execute fixed hard coded SQL queries
+PreparedStatement - to execute the queries with the dynamic input
+CallableStatement - to invoke Stored Procedure/functions of pl/sql
+			
+Registering Driver
+	- DriverManager.registerDriver(Object)
+	- Class.forName(String fqcn)
+	
+ACID in Teansaction
+	- Atomicity
+	- Consistency
+	- Isolated
+	- Durable
+	
+	
+mysql> delimiter $
+mysql> create function get_name(id int) returns varchar(20)
+    -> deterministic
+    -> begin
+    -> declare name varchar(20);
+    -> select cname into name from cust where cid=id;
+    -> return name;
+    -> end
+    -> $
+Query OK, 0 rows affected (0.02 sec)
+
+mysql> delimiter ;
+
+

@@ -1,0 +1,6 @@
+765,Jet,Kochi,Kolkata
+123,Indigo,Mumbai,Amravati
+342,Indigo,Dehradun,Pune
+654,Jet,Pune,Delhi
+764,Jet,Chennai,Gandhinagar
+556,Indigo,Mumbai,Bengaluru

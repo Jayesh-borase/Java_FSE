@@ -1,0 +1,62 @@
+Collection Framework / API
+	- Provides implementation of well known data structures in the industry
+	- Builds on generic
+	- Called as Collection because the root interface name is collection
+	- Java's Optimized implementation of DS so the developers can focus on business
+Collection(Interface)
+	- List
+	- Set
+		-SortedSet
+	- Queue
+	-Dequeue
+	-Map
+		-SortedMap
+
+Collection
+	-Collection of objects, one object per element/node
+List
+	- Sequence is guaranteed, duplicates are allowed
+	- ArrayList, LinkedList, Vector(Synchronized)
+Set
+	- Sequence not guaranteed, duplicates are not allowed
+	- HashSet
+SortedSet
+	- Maintains Order
+	- TreeSet
+Map
+	- 2 Objects per node/element,represents key value pair, duplicate keys are not allowed
+	- HashMap, HashTable(Synchronized), Properties, ResourceBundle, ConcurrentHashMap
+SortedMap
+	- keys are maintained in order
+	- TreeMap
+	
+Traversing over Collection
+	- Using for loop over index (Works with list types of Collection)
+	- Iterators was most commonly used way, ListIterator allows bi-directional traversing.
+	- For-each is used most commonly today
+	- forEach() method is newer addition
+	
+i18n - Internationalization
+
+
+Book
+	- isbn
+	- author
+	- title
+	- price
+	
+pojo - plain old java object
+Dao  - data access object
+
+Layered Architecture
+- Presentation Layer
+	- User Interface (GUI/CLI/Web UI)
+- Business Logic
+	- Business rules in service classes
+- Persistence Layer
+	- CRUD Operations (DAO/JDBC/JPA)
+	
+	
+Injections
+	- Constructor Injection
+	- Setter Injection

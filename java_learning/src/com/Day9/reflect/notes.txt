@@ -1,0 +1,26 @@
+Maven:
+	- Use for automation of testing
+	- Project Management Tool
+	- pom.xml (Project Object Model)
+	- TDD : Test Driven Development
+	
+Testing:
+	-white Box:
+		-unit testing
+			-JUnit
+
+JUnit:
+-Life Cycle
+	-@Test
+	-@BeforeEach
+	-@AfterEach
+	-@BeforeAll
+	-@AfterAll
+
+Assert Method:
+-assertTrue()
+-assertfalse()
+-assertEquals()
+-assertNotNull()
+-assertSame()
+

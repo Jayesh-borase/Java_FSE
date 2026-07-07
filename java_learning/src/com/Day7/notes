@@ -1,0 +1,50 @@
+SQL - Structured Query Language
+	- DML - Data Manipulation Language - 
+		  - Insert, Update, Delete
+	- DDL - Data Defination Language
+		  - Create, Alter  
+	- DQL - Data Query Language
+		  - Select 
+	- TCL - Transaction Control Language
+		  - Commit, Rollback,Savepoint
+	 	
+Constrains
+	- Primary Key - not allows null, index created implicitely
+	- Foreign Key - Connect 2 tables
+	- Unique Key - allows only one null, index are not created
+	- Check - to add restrictions
+	- Not Null - Null not allowed
+	
+Database Objects
+	- Table
+	- Index
+	- View
+	- Sequence
+	- Synonym
+	
+Data Types
+	- Integer
+	- Varchar
+	- Decimal
+	- Date
+	- Boolean
+	- Timestamp
+
+	
+Difference between delete and truncate is that truncate can not be rolled back but the delete can.
+
+	
+Scenario:
+	Online Shopping (Schema)
+	- Product - [code,description,price,stock,availability]
+	- Customer - [cid,cname,email,address,phone,password,status]
+	- Order - [id,amount,date,cid]
+	- Payment - [pid,id,mode,amount,date]
+	- Ordered_Product - [code,id,qty]
+	
+	
+	oops,sql,code java 8,maven,devops ci-cd, github,nexus,jeankins and sonar, sprintbopot,aws,continers
+	
+
+	
+

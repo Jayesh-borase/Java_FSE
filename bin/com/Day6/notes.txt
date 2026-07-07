@@ -1,0 +1,39 @@
+
+Sorting custom or user Defined Objects in TreeSet/SortedSet
+	- To sort objects TreeSet requires sorting logic/algorithm
+	- There are 2 ways to provide the logic
+		- By Creating a comparator for object
+		- By making object comparable
+
+Optional Class
+	- To avoid NullPointerException
+	- Value either exist or null
+		
+Streams API
+	- Design to process large amount of data
+	- It works on collection, but it is not a data structure
+	- It is designed for lambdas
+	- It perfoms basic tasks such as search,sort,filter,reduce,map etc.
+	- It has 2 types of operations
+		- Intermediate Operations: There can be 0 or more intermediate operations.
+		- Terminal Operations: there can be 1 terminal operation, which closes the stream.
+
+File I/O
+	Streams
+		- Characters
+		- Binary
+		
+Serialization
+	- Process to write state of an Java Object to the underlying stream
+	- Vice-versa is Deserialization
+
+Buffers
+	- Temporary Memory Area
+	- Faster reading and writing
+	
+Channels
+	- Uses single buffer for both reading and writing
+	
+	
+HW - IPL Example + csv file of some records
+		
