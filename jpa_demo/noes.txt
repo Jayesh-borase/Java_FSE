@@ -1,0 +1,25 @@
+//annotation
+@Entity:represents the records //id,name,course
+@id : represents the primary key
+@Column: we can specify specific column
+@Table:to specify the name of table //students
+
+//association anotation:
+
+@onetomany: we specify it on the parent entity (oen parent have multiple child)
+
+@manytoone: in child entity (manty child have one parent)
+	@joincolumn: to represents the foregin key referance
+	always in the manytoone
+	
+@manytomaany: we use third table for achieve this
+	@joinTable:we use join table  for the join third table to both table that contains both table primary key
+
+@mappedBy: use for defining the object of the parent
+	
+@cascade
+
+@hql: we use class name insted of the table name
+
+@GeneratedValue : use generate value automatically
+

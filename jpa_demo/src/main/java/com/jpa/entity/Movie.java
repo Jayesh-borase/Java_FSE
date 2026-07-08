@@ -3,12 +3,14 @@ package com.jpa.entity;
 import java.util.ArrayList;
 import java.util.List;
 
+import javax.persistence.CascadeType;
 import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.Id;
 import javax.persistence.JoinColumn;
 import javax.persistence.JoinTable;
 import javax.persistence.ManyToMany;
+import javax.persistence.OneToMany;
 import javax.persistence.Table;
 
 @Entity @Table(name="movies")
@@ -25,6 +27,9 @@ public class Movie
 	@JoinTable(name="showtime",joinColumns= {@JoinColumn(name="mid")},
 	    inverseJoinColumns= {@JoinColumn(name="cid")})
 	private List<Cinema> cinemas=new ArrayList<Cinema>();
+	
+	@OneToMany(mappedBy = "movie", cascade = CascadeType.ALL)
+    private List<Song> songs = new ArrayList<Song>();
 	
 	public Movie() {
 	}
@@ -71,6 +76,16 @@ public class Movie
 	public void setCinemas(List<Cinema> cinemas) {
 		this.cinemas = cinemas;
 	}
+
+	public List<Song> getSongs() {
+		return songs;
+	}
+
+	public void setSongs(List<Song> songs) {
+		this.songs = songs;
+	}
+
+
 	
 	
 	

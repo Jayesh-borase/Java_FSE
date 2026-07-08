@@ -1,8 +1,12 @@
 package com.jpa.entity;
 
+import java.util.ArrayList;
+import java.util.List;
+
 import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.Id;
+import javax.persistence.OneToMany;
 import javax.persistence.Table;
 
 @Entity
@@ -11,11 +15,15 @@ public class Customer {
 	@Id @Column(name="cid")
 	private int custId;
 	
-	@Column(name="cname", length= 30)
+	@Column(name="cname", length= 30,nullable=false)
 	private String custName;
-	
+	@Column(nullable=false)
 	private String city;
 
+	@OneToMany(mappedBy="cust")
+	private List<Order> orders=new ArrayList<>();
+	
+	
 	public Customer() {
 
 	}
@@ -25,6 +33,11 @@ public class Customer {
 		this.custId = custId;
 		this.custName = custName;
 		this.city = city;
+	}
+	
+	@Override
+	public String toString() {
+		return "Customer [custId=" + custId + ", custName=" + custName + ", city=" + city + "]";
 	}
 	
 	//Getters and Setters
@@ -52,9 +65,12 @@ public class Customer {
 		this.city = city;
 	}
 
-	@Override
-	public String toString() {
-		return "Customer [custId=" + custId + ", custName=" + custName + ", city=" + city + "]";
+	public List<Order> getOrders() {
+		return orders;
+	}
+
+	public void setOrders(List<Order> orders) {
+		this.orders = orders;
 	}
 	
 	
