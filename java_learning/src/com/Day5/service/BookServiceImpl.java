@@ -17,6 +17,7 @@ public class BookServiceImpl implements BookService {
 	public BookServiceImpl(BookDao dao) {
 		this.dao = dao;
 	}
+	
 	@Override
 	public boolean save(Book b) {
 		return dao.save(b);
