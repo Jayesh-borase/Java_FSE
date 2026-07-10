@@ -1,0 +1,23 @@
+package test.ex2;
+
+import org.junit.jupiter.api.Test;
+import org.springframework.beans.factory.BeanFactory;
+import org.springframework.context.ApplicationContext;
+import org.springframework.context.support.ClassPathXmlApplicationContext;
+
+import com.ex2.Stock;
+
+public class TestStock 
+{
+	@Test
+	public void testStock()
+	{
+		ApplicationContext appCtx=new ClassPathXmlApplicationContext("ex2-context.xml");
+		
+		
+		Stock s1=(Stock) appCtx.getBean("stk");
+		Stock s2= appCtx.getBean(Stock.class,"stk");
+		
+		System.out.println(s1 == s2);
+	}
+}

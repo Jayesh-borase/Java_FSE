@@ -1,0 +1,28 @@
+Spring:
+	-Config
+	  -XML
+	  -Annotation
+	  -Java
+	
+	-Instantiation
+	   -Scope
+	      -Singleton
+	      - Factory
+    	   - Strategy
+	      -Eager
+	      -Lazy
+
+	-Injection
+	   -Setter
+	   - Constructor
+
+Container ->IoC(Inversion of control)
+   -ApplicationContext(I) 
+   -ClassPatgXmlApplicationContext
+	
+	
+2) Annotation:
+   @Component
+   @Repository
+   @Configuration
+   @Controller
